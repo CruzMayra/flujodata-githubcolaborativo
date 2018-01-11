@@ -7,9 +7,18 @@ function getStudentsList() {
 
 function studentAdd() {
     // TO DO: Preguntar al usuario por el nombre, puntos técnicos y puntos de HSE de un estudiante
+    var name = prompt('Ingrese el nombre de la estudiante');
+    var techPoints = prompt('Ingrese puntos Tech');
+    var hsePoints = prompt('Ingrese puntos HSE');
     // Hint: El estudiante debe ser agregado a la lista de estudiantes
+    var student = {
+      'nameStudent': name,
+      'tech': techPoints,
+      'hse':hsePoints
+    }
+    students.push(student);
     // TO DO: Retornar el estudiante recientemente creado
-   
+    console.log(student);
 }
 
 function show(student) {
