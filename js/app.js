@@ -18,7 +18,7 @@ function studentAdd() {
     }
     students.push(student);
     // TO DO: Retornar el estudiante recientemente creado
-    console.log(student);
+    return student
 }
 
 function show(student) {
@@ -28,9 +28,9 @@ function show(student) {
     result += "<div class='col m12'>";
     result += "<div class='card blue-grey darken-1'>";
     result += "<div class='card-content white-text'>";
-    result += "<p><strong>Nombre:</strong> " + estudiante.nombre + "</p>";
-    result += "<p><strong>Puntos Técnicos:</strong> " + estudiante.puntajeTecnico + "</p>";
-    result += "<p><strong>Puntos HSE:</strong> " + estudiante.puntajeHse + "</p>";
+    result += "<p><strong>Nombre:</strong> " + student.nameStudent + "</p>";
+    result += "<p><strong>Puntos Técnicos:</strong> " + student.tech + "</p>";
+    result += "<p><strong>Puntos HSE:</strong> " + student.hse + "</p>";
     result += "</div>";
     result += "</div>";
     result += "</div>";

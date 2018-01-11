@@ -1,6 +1,6 @@
 +function  () {
     // Elementos
-    var addButton = document.getElementById('agragar');
+    var addButton = document.getElementById('agregar');
     var showButton = document.getElementById('mostrar');
     var searchButton = document.getElementById('buscar');
     var techButton = document.getElementById('top-tecnico');
@@ -24,6 +24,7 @@
 
 
     // Manejadores de eventos
-addButton.addEventListener('click',addEvent);
-showButton.addEventListener('click',showEvent);
+addButton.addEventListener('click', addEvent);
+showButton.addEventListener('click', showEvent);
+
 }();
