@@ -19,6 +19,7 @@ function studentAdd() {
     students.push(student);
     // TO DO: Retornar el estudiante recientemente creado
     return student
+    console.log(student);
 }
 
 function show(student) {
