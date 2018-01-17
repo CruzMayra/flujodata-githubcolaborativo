@@ -1,15 +1,16 @@
-var students = [];
+  var students = [];
 
 function getStudentsList() {
     // TO DO: Retornar la lista de estudiantes
     return students;
+    console.log(students);
 }
 
 function studentAdd() {
     // TO DO: Preguntar al usuario por el nombre, puntos técnicos y puntos de HSE de un estudiante
     var name = prompt('Ingrese el nombre de la estudiante');
-    var techPoints = prompt('Ingrese puntos Tech');
-    var hsePoints = prompt('Ingrese puntos HSE');
+    var techPoints = parseInt(prompt('Ingrese puntos Tech'));
+    var hsePoints = parseInt(prompt('Ingrese puntos HSE'));
     // Hint: El estudiante debe ser agregado a la lista de estudiantes
     var student = {
       'nameStudent': name,
@@ -19,7 +20,8 @@ function studentAdd() {
     students.push(student);
     // TO DO: Retornar el estudiante recientemente creado
     return student
-    console.log(student);
+
+
 }
 
 function show(student) {
@@ -43,13 +45,28 @@ function listShow(students) {
     // TO DO: Iterar la lista del estudiantes para devolverlos en el formato que usa la función mostrar(estudiante)
   // Retornar el template de todos los estudiantes
 
+  var studentList = "";
+
+  for(var i = 0; i < students.length; i++){
+    studentList += show(students[i]);
+  }
+return studentList
 }
 
 function search(studentName, students) {
     // TO DO: Buscar el nombre en la lista de estudiantes que se recibe por parámetros
     // Retornar el objeto del estudiante buscado
     // Nota: NO IMPORTA SI EL USUARIO ESCRIBE EL NOMBRE EN MAYÚSCULAS O MINÚSCULAS
+    /*var name = studentName.toLowerCase();
+    var found = students.filter(function(){
 
+    });
+    console.log(found);*/
+
+    var searchStudent = students.filter(function(student) {
+        return student.nameStudent.toLowerCase() === studentName.toLowerCase();
+    })
+    return searchStudent
 }
 
 function topTech(students) {
