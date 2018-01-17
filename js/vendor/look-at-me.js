@@ -21,10 +21,20 @@
         result.innerHTML = listShow(students);
     };
 
+    var searchEvent = function (e) {
+      e.preventDefault();
+      var students = getStudentsList();
+      var searchName = prompt("Proporcione un nombre a buscar");
+      var searchStudent =search(searchName,students);
+      result.innerHTML = listShow(searchStudent);
+
+    }
+
 
 
     // Manejadores de eventos
 addButton.addEventListener('click', addEvent);
 showButton.addEventListener('click', showEvent);
+searchButton.addEventListener('click', searchEvent);
 
 }();
